@@ -1,6 +1,3 @@
-# Clipboard-Hijacke
-Clipboard-Hijacke Payload
-
 # Clipboard Monitoring Tool
 
 This project enables clipboard monitoring on a Windows machine, logging clipboard contents locally and sending them to a remote server using HTTP POST requests. It is ideal for scenarios where clipboard data needs to be monitored across a network.
