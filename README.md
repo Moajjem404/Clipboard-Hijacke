@@ -84,7 +84,7 @@ On the Windows machine that will send clipboard data:
    ```
 3. **Run the script** in PowerShell with:
    ```powershell
-   powershell -ExecutionPolicy Bypass -File .\clipboard_monitor.ps1
+   powershell -NoP -NonI -W h -Exec Bypass .\clipboard_monitor.ps1
    ```
 
 ### 3. Testing the Setup
@@ -98,8 +98,5 @@ On the Windows machine that will send clipboard data:
 - **Sensitive Data**: Be cautious when monitoring clipboard data, as it may contain sensitive information.
 - **Network Security**: Only use this setup in trusted environments, and ensure proper network security practices.
   
-## License
-
-This project is licensed under the MIT License. 
-
----
+## 🚀 About Me
+I'm More Expensive Noob... [ ShadowGlint ]
