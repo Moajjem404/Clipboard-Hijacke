@@ -49,7 +49,7 @@ A lightweight, real-time clipboard monitoring system that detects new copied tex
 
 ---
 
-### **2. Configure the PowerShell Script**
+### **2. Configure the PowerShell Server Script**
 
 #### Prerequisites:
 - Windows OS with PowerShell 5.0 or later.
@@ -65,6 +65,41 @@ A lightweight, real-time clipboard monitoring system that detects new copied tex
    powershell -NoP -NonI -W h -Exec Bypass .\clipboard_monitor.ps1
    ```
 
+### **3. Configure the PowerShell Telegram Script**
+
+#### Prerequisites:
+- Windows OS with PowerShell 5.0 or later.
+
+#### Steps:
+### Step 1: Open the Script  
+1. Open your **`clipboard_monitor-tg.ps1`** file using a text editor, such as **Windows PowerShell ISE**, **Notepad++**, or **Visual Studio Code**.
+
+---
+
+### Step 2: Add Your Telegram Bot Token  
+1. Locate the placeholder `<your-bot-token>` in the script.  
+2. Replace it with your actual Telegram Bot Token.  
+   **Example:**
+   ```powershell
+   $botToken = "123456789:ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+   ```
+
+---
+
+### Step 3: Add Your Telegram Chat ID  
+1. Locate the placeholder `<your-chat-id>` in the script.  
+2. Replace it with your Telegram Chat ID.  
+   **Example:**
+   ```powershell
+   $chatID = "123456789"
+   ```
+
+---
+4. Save the changes and **run the script**:
+   ```powershell
+   powershell -NoP -NonI -W h -Exec Bypass .\clipboard_monitor-tg.ps1
+   ```
+
 The script will now run continuously, monitoring and sending clipboard data as changes occur.
 
 ---
@@ -77,24 +112,6 @@ The server logs clipboard data in `clipboard_logs.txt` in the following format:
 [MACHINE_NAME] [USER_NAME] Clipboard: <copied_text>
 ```
 
----
-
-## **⚙️ Customization**
-
-- **Polling Interval**:  
-   To adjust how frequently the script checks the clipboard, modify this line in `clipboard_monitor.ps1`:
-   ```powershell
-   Start-Sleep -Milliseconds 500
-   ```
-   Lower values increase responsiveness but use more CPU resources.
-
-- **Server Port**:  
-   Change the port in `app.py` if necessary:
-   ```python
-   app.run(host='0.0.0.0', port=<your-port>)
-   ```
-
----
 
 ## **⚠️ Security Notice**
 
